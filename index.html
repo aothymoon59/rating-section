@@ -67,9 +67,9 @@
 
         .rating_label {
             font-size: 14px;
-            color: #333;
-            width: 20px;
+            color: #4C4C4C;
             text-align: right;
+            font-weight: 600;
         }
 
 
@@ -109,17 +109,103 @@
             order: 1;
         }
 
+        .rating_item_score_container {
+            order: 2;
+        }
+
         .rating_item_score {
             font-size: 28px;
             font-weight: 500;
             color: #4C4C4C;
-            order: 2;
         }
 
         .rating_item_img {
             width: 20px;
             height: 20px;
             order: 3;
+        }
+
+        @media screen and (max-width: 991px) {
+            .rating_info {
+                padding: 16px;
+            }
+
+            .rating_section_separator {
+                display: none;
+            }
+
+            .rating_details {
+                padding: 16px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .rating_range_container {
+                padding-right: 0;
+            }
+
+            .rating_item {
+                gap: 10px;
+                padding: 0;
+                border-left: none;
+            }
+
+        }
+
+        @media screen and (max-width: 767px) {
+            .rating_info {
+                padding: 16px;
+            }
+
+            .rating_section_separator {
+                display: none;
+            }
+
+            .rating_details {
+                padding: 16px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .rating_range_container {
+                padding-right: 0;
+            }
+
+            .rating_item_container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .rating_item {
+                flex-direction: row;
+                gap: 10px;
+                padding: 0;
+                border-left: none;
+                border-bottom: 1px solid #E2E2E2;
+                align-items: center;
+                padding-bottom: 10px;
+            }
+
+            .rating_item:last-child {
+                border-bottom: none;
+            }
+
+            .rating_item_img {
+                order: 1;
+            }
+
+            .rating_item_title {
+                order: 2;
+            }
+
+            .rating_item_score_container {
+                order: 3;
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+            }
         }
     </style>
 </head>
@@ -169,22 +255,31 @@
             <div class="rating_item_container">
                 <div class="rating_item">
                     <p class="rating_item_title">Accommodation</p>
-                    <h4 class="rating_item_score">5.0</h4>
+                    <div class="rating_item_score_container">
+                        <h4 class="rating_item_score">5.0</h4>
+                    </div>
                     <img class="rating_item_img" src="./assets/1.png" alt="">
+
                 </div>
                 <div class="rating_item">
-                    <p class="rating_item_title">Accommodation</p>
-                    <h4 class="rating_item_score">5.0</h4>
+                    <p class="rating_item_title">Childcare</p>
+                    <div class="rating_item_score_container">
+                        <h4 class="rating_item_score">5.0</h4>
+                    </div>
                     <img class="rating_item_img" src="./assets/2.png" alt="">
                 </div>
                 <div class="rating_item">
-                    <p class="rating_item_title">Accommodation</p>
-                    <h4 class="rating_item_score">5.0</h4>
+                    <p class="rating_item_title">Food</p>
+                    <div class="rating_item_score_container">
+                        <h4 class="rating_item_score">5.0</h4>
+                    </div>
                     <img class="rating_item_img" src="./assets/3.png" alt="">
                 </div>
                 <div class="rating_item">
-                    <p class="rating_item_title">Accommodation</p>
-                    <h4 class="rating_item_score">5.0</h4>
+                    <p class="rating_item_title">Activities</p>
+                    <div class="rating_item_score_container">
+                        <h4 class="rating_item_score">5.0</h4>
+                    </div>
                     <img class="rating_item_img" src="./assets/4.png" alt="">
                 </div>
             </div>
