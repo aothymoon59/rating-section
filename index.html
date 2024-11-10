@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section_container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #F8F8F8;
+            padding: 0 30px;
+        }
+
+        .rating_section_separator {
+            width: 100%;
+            height: 1px;
+            background-color: #E2E2E2;
+        }
+
+        .rating_info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 45px 30px 30px;
+
+        }
+
+        .rating_avg {
+            font-size: 50px;
+            font-weight: 700;
+            color: #4C4C4C;
+        }
+
+        .rating_subtitle {
+            font-size: 20px;
+        }
+
+        .rating_details {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
+        .rating_range_container {
+            display: flex;
+            flex-direction: column;
+            padding-right: 30px;
+            justify-content: center;
+            gap: 7px;
+        }
+
+        .rating_row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+        }
+
+
+        .rating_label {
+            font-size: 14px;
+            color: #333;
+            width: 20px;
+            text-align: right;
+        }
+
+
+        .rating_bar {
+            position: relative;
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+
+        .rating_fill {
+            position: absolute;
+            height: 100%;
+            background-color: #333;
+            border-radius: 4px;
+        }
+
+        .rating_item_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rating_item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 15px 20px;
+            border-left: 1px solid #E2E2E2;
+        }
+
+        .rating_item_title {
+            font-size: 20px;
+            color: #575757;
+            order: 1;
+        }
+
+        .rating_item_score {
+            font-size: 28px;
+            font-weight: 500;
+            color: #4C4C4C;
+            order: 2;
+        }
+
+        .rating_item_img {
+            width: 20px;
+            height: 20px;
+            order: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section_container">
+
+        <div class="rating_info">
+            <img src="./assets/star-review.png" alt="star-icon">
+            <h2 class="rating_avg">4.85</h2>
+            <p class="rating_subtitle">based on 184 reviews</p>
+        </div>
+        <hr class="rating_section_separator">
+        <div class="rating_details">
+            <div class="rating_range_container">
+                <div class="rating_row">
+                    <span class="rating_label">5</span>
+                    <div class="rating_bar">
+                        <div class="rating_fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="rating_row">
+                    <span class="rating_label">4</span>
+                    <div class="rating_bar">
+                        <div class="rating_fill" style="width: 30%;"></div>
+                    </div>
+                </div>
+                <div class="rating_row">
+                    <span class="rating_label">3</span>
+                    <div class="rating_bar">
+                        <div class="rating_fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="rating_row">
+                    <span class="rating_label">2</span>
+                    <div class="rating_bar">
+                        <div class="rating_fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+                <div class="rating_row">
+                    <span class="rating_label">1</span>
+                    <div class="rating_bar">
+                        <div class="rating_fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="rating_item_container">
+                <div class="rating_item">
+                    <p class="rating_item_title">Accommodation</p>
+                    <h4 class="rating_item_score">5.0</h4>
+                    <img class="rating_item_img" src="./assets/1.png" alt="">
+                </div>
+                <div class="rating_item">
+                    <p class="rating_item_title">Accommodation</p>
+                    <h4 class="rating_item_score">5.0</h4>
+                    <img class="rating_item_img" src="./assets/2.png" alt="">
+                </div>
+                <div class="rating_item">
+                    <p class="rating_item_title">Accommodation</p>
+                    <h4 class="rating_item_score">5.0</h4>
+                    <img class="rating_item_img" src="./assets/3.png" alt="">
+                </div>
+                <div class="rating_item">
+                    <p class="rating_item_title">Accommodation</p>
+                    <h4 class="rating_item_score">5.0</h4>
+                    <img class="rating_item_img" src="./assets/4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
